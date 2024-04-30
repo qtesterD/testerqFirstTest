@@ -12,10 +12,10 @@ public class Driver {
 
     public static WebDriver initWebDriver() {
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("C:\\Users\\worker\\AppData\\Local\\Chromium\\Application\\chrome.exe");
+        //options.setBinary("C:\\Users\\worker\\AppData\\Local\\Chromium\\Application\\chrome.exe");
         options.addArguments("--incognito");
 
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
 
         driver.manage().window().maximize();
 
@@ -27,7 +27,7 @@ public class Driver {
 
     public static WebDriver initWebDriver(String path) {
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("C:\\Users\\worker\\AppData\\Local\\Chromium\\Application\\chrome.exe");
+        //options.setBinary("C:\\Users\\worker\\AppData\\Local\\Chromium\\Application\\chrome.exe");
         options.addArguments("--incognito");
 
         driver = new ChromeDriver(options);
