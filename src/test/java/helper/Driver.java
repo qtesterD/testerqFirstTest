@@ -15,7 +15,7 @@ public class Driver {
         options.setBinary("C:\\Users\\worker\\AppData\\Local\\Chromium\\Application\\chrome.exe");
         options.addArguments("--incognito");
 
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
 
         driver.manage().window().maximize();
 
