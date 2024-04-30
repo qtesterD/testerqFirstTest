@@ -24,6 +24,8 @@ public class Driver {
         ChromeOptions options = new ChromeOptions();
         //options.setBinary("C:\\Users\\worker\\AppData\\Local\\Chromium\\Application\\chrome.exe");
         options.addArguments("--incognito");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
         driver = new RemoteWebDriver(service.getUrl(), options);
 
         // driver = new ChromeDriver(options);
