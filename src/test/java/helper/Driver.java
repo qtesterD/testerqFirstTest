@@ -21,10 +21,10 @@ public class Driver {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        driver = new RemoteWebDriver(service.getUrl(), new ChromeOptions());
         ChromeOptions options = new ChromeOptions();
         //options.setBinary("C:\\Users\\worker\\AppData\\Local\\Chromium\\Application\\chrome.exe");
         options.addArguments("--incognito");
+        driver = new RemoteWebDriver(service.getUrl(), options);
 
         // driver = new ChromeDriver(options);
 
