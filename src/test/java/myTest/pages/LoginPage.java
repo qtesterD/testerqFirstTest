@@ -27,8 +27,11 @@ public class LoginPage extends Base {
     }
 
     public void login() {
+        System.out.println("Login Page1");
         String userName = getUserName();
         String password = getPassword();
+        System.out.println("Login Page2" + getUserName().isEmpty());
+        System.out.println("Page3" + getPassword().length());
         if (!password.isEmpty() && !userName.isEmpty()) {
 
                 loginButton.click();
