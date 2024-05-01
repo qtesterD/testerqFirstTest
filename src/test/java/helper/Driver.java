@@ -32,8 +32,6 @@ public class Driver {
 
         driver.manage().window().maximize();
 
-        System.out.printf("123");
-
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("https://fk.jira.lanit.ru/login.jsp?os_destination=%2Fbrowse%2FFCS-294875");
 

@@ -1,9 +1,11 @@
 package myTest.pages;
 
 import helper.Base;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 
 import static helper.WaitingClass.waitResult;
 
@@ -60,6 +62,7 @@ public class LoginPage extends Base {
         return getValue(passwordField);
     }
 
+    @Step("Ввести имя")
     public void setUserNameField() {
         userNameField.clear();
         userNameField.sendKeys("DMaltsev");
