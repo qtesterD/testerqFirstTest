@@ -111,7 +111,6 @@ public class Base {
         waitVisibilityOfElement(webElement);
         //   // switchToFrame();
         String text = webElement.getText();
-        System.out.println("text = " + text + "text=" + webElement);
         //    switchToDefaultFrame();
         return text;
     }
@@ -127,7 +126,7 @@ public class Base {
         waitVisibilityOfElement(webElement);
         //   // switchToFrame();
         String text = webElement.getAttribute("value");
-        System.out.println("text = " + text + "text=" + webElement);
+
         //    switchToDefaultFrame();
         return text;
     }
