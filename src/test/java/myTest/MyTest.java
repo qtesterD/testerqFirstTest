@@ -1,17 +1,23 @@
 package myTest;
 
 import db.DbConection;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import myTest.pages.LoginPage;
 import myTest.pages.Page;
+import org.junit.rules.TestWatcher;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static helper.Driver.initWebDriver;
 
 
+@Epic("Web Application Regression Testing using JUnit4")
+@Feature("Login Page Tests")
 public class MyTest {
 
 
