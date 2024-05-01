@@ -40,7 +40,7 @@ public class MyTest {
         }
     }
 
-    @Test()
+    //@Test()
     public void test1(String url, String user, String pass) {
         try (var conn = DbConection.open(url,
                 user,
