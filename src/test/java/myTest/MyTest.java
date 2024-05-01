@@ -7,12 +7,9 @@ import io.qameta.allure.Feature;
 import myTest.pages.LoginPage;
 import myTest.pages.Page;
 
+import org.junit.*;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+
 
 import static helper.Driver.initWebDriver;
 
@@ -27,7 +24,7 @@ public class MyTest {
     private LoginPage loginPage;
 
 
-    @BeforeClass
+    @Before
     public void initPages() {
         WebDriver driver = initWebDriver();
         this.driver = driver;
@@ -36,7 +33,7 @@ public class MyTest {
 
     }
 
-    @AfterClass
+    @After
     public void quitDriver() {
         try {
             Thread.sleep(3000);
@@ -46,18 +43,19 @@ public class MyTest {
             System.out.println(e);
         }
     }
-
-    @Test()
-    @Description("Test settings org")
-    public void test1(String url, String user, String pass) {
-        try (var conn = DbConection.open(url,
-                user,
-                pass)) {
-
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-    }
+//
+//    @Test()
+//    @Description("Test settings org")
+//
+//    public void test1(String url, String user, String pass) {
+//        try (var conn = DbConection.open(url,
+//                user,
+//                pass)) {
+//
+//        } catch (Exception e) {
+//            System.out.println(e);
+//        }
+//    }
 
     @Test()
     @Description("Test text error in incorrect data")
