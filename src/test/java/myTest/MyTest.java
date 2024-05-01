@@ -1,11 +1,12 @@
 package myTest;
 
 import db.DbConection;
+import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import myTest.pages.LoginPage;
 import myTest.pages.Page;
-import org.junit.rules.TestWatcher;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -47,6 +48,7 @@ public class MyTest {
     }
 
     @Test()
+    @Description("Test settings org")
     public void test1(String url, String user, String pass) {
         try (var conn = DbConection.open(url,
                 user,
@@ -58,6 +60,7 @@ public class MyTest {
     }
 
     @Test()
+    @Description("Test text error in incorrect data")
     public void test2() {
         loginPage.setPasswordField("jtjtjt");
         loginPage.setUserNameField("jtjtjt");
@@ -67,6 +70,7 @@ public class MyTest {
     }
 
     @Test()
+    @Description("Test sucsses login")
     public void test3() {
         main.stat();
     }
